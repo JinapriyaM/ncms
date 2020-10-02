@@ -8,13 +8,22 @@ public class UserServiceImpl implements UserService{
     public String registerUser(User user) {
         UserRepo userRepo = new UserRepo();
         String result = userRepo.userRegister(user);
-        return result;
+        if(result.equals("success"){
+            return "User register succesful";
+        }else{
+            return "User register unsucceful";
+        }
     }
 
     @Override
     public String loginUser(String userName, String password) {
         UserRepo userRepo = new UserRepo();
         String name = userRepo.userLogin(userName, password);
-        return name;
+        if(result.equals("success"){
+            return name;
+        }else{
+            return "User login unsucceful";
+        }
+        
     }
 }
